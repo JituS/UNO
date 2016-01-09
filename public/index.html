@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UNO_GAME</title>
+	<script type = "text/javascript" src="./javascript/jquery-2.1.4.min.js" > </script>
+	<script type = "text/javascript" src="./javascript/index.js" > </script>
+	<link rel="stylesheet" type="text/css" href="./css/index.css" />
+</head>
+<body>
+	<div id="container">
+		<div id="superHeading">
+			<h1> Welcome to online UNO</h1>
+			<h3>We do not stop playing because we grow  old, we grow old because we stop playing...!!</h3>
+			<div id="inputForm"></div>
+		</div>
+		<div id="rules">
+			<h3 class="heading">SHORTCUTS:-</h3>
+				<ul>
+					<li>d - Draw a card</li>
+					<li>c - Catch UNO</li>
+					<li>s - Say UNO</li>
+					<li>leftArrow - Change the Turn</li>
+				</ul>
+			<h3 class="heading">YOU WILL HAVE:</h3>
+		<ul class="rulesDescription">
+			<li>19 Blue Cards - 0 to 9</li>
+			<li>19 Green Cards - 0 to 9</li>
+			<li>19 Green Cards - 0 to 9</li>
+			<li>19 Red Cards - 0 to 9</li>
+			<li>19 Yellow Cards - 0 to 9</li>
+			<li>8 Draw Two cards - 2 each in Blue, Green, Red and Yellow</li>
+			<li>8 Reverse Cards - 2 each in Blue, Green, Red and Yellow</li>
+			<li>8 Skip Cards - 2 each in Blue, Green, Red and Yellow</li>
+			<li>4 Wild Cards</li>
+			<li>4 Wild Draw 4 cards</li>
+		</ul>
+		<h3 class="heading">UNO IN A NUTSHELL</h3>
+		<p class="rulesDescription">Each player is dealt 7 cards with the remaining ones placed face down to form a DRAW pile. The top card of the DRAW pile is turned over to begin a DISCARD pile.</p>
+		<p class="rulesDescription">The first player has to match the card in the DISCARD pile either by number, color or word. For example, if the card is a red 7, player must throw down a red card or any color 7. Or the player can throw down a Wild Card. If the player doesn't have anything to match, he must pick a card from the DRAW pile. If he can play what is drawn, great. Otherwise play moves to the next person.
+		</p>
+		<p class="rulesDescription">When you have one card left, you must yell "UNO" (meaning one). Failure to do this results in you having to pick two cards from the DRAW pile. That is, of course if you get caught by the other players.
+		</p>
+		<p class="rulesDescription">Once a player has no cards left, the hand is over. Points are scored (see scoring section) and you start over again. That's UNO in a nutshell.</p>
+		<h3 class="heading">GOING OUT</h3>
+		<p class="rulesDescription">A player who forgets to say UNO before his card touches the discard pile, but "catches" himself before any other player catches him, is safe and is not subject to the penalty. You may not catch a player for failure to say UNO until his second to last card touches the DISCARD pile. Also, you may not catch a player for failure to say UNO after the next player begins his turn. "Beginning a turn is defines as either drawing a card from the DRAW pile or drawing a card from your hand to play.<br>
+		If the last card played in a hand is a Draw Two or Wild Draw Four card, the next player must draw the two or four cards. These cards are counted when points are totaled.<br>
+		If no one is out of cards by the time the DRAW pile is depleted, reshuffle and continue play.</p>
+		<h3 class="heading">RENEGING</h3>
+		<p class="rulesDescription">A player may choose not to play a playable card from his hand. If so, the player must draw a card from the DRAW pile. If playable, that card can be played, but the player may not play a card from his hand after the draw.</p>
+		<h3 class="heading">WHAT WORD CARDS MEAN --</h3>
+		<h4 class="childHeading">Draw Two Cards</h4>
+		<p class="rulesDescription">When this card is played, the next person to play must draw 2 cards and forfeit his turn.</p>
+		<h4 class="childHeading">Reverse Card</h4>
+		<p class="rulesDescription">Simply reverse direction of play. Play left becomes play right, and vice versa.</p>
+		<h4 class="childHeading">Skip Card</h4>
+		<p class="rulesDescription">The next player to play loses his turn and is "skipped." Mighty clever.</p>
+		<h4 class="childHeading">Wild Card</h4>
+		<p class="rulesDescription">This card can be played on any card. The person playing the card calls any color to continue play, including the one presently being played if desired. A Wild card can be played even if the player has another playable card in his hand.</p>
+		<h4 class="childHeading">Wild Draw Four Card </h4>
+		<p class="rulesDescription">This is the best, meanest, most sneaky card to have. Not only does the player get to call the next color played, but the next player has to pick 4 cards and forfeit his turn. There is a hitch, however (of course): you can only play this card when you don't have a card in your hand that matches the color of the card previously played.</p>
+		<p class="note">Note: A player may have a matching number or word card of a different color in his hand and plays his "Wild Draw Four" card.</p>
+		</div>
+		<div id="showPlayers">
+			<h2> You will be playing with : </h2>
+			<p><span id="players"></span></p>
+		</div>
+	</div>
+</body>
+</html>

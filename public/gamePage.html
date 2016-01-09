@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>join UNO</title>
+	<script type = "text/javascript" src="./javascript/jquery-2.1.4.min.js" > </script>
+	<script type="text/javascript" src = "./javascript/generateCards.js"></script>
+	<script type="text/javascript" src = "./javascript/gamePage.js"></script>
+	<link rel="stylesheet" href="./css/gamePage.css">
+	<script src="./javascript/lodash.js"></script>
+</head>
+<body bgcolor="#F79F81">
+<div id="container">
+ 	<div id="header">
+ 		<div id="mainHeader">
+ 			<h1>UNO !!!</h1>
+ 		</div>
+ 	</div>
+ 	<hr>
+ 	<div id="gameBoard">
+ 		<div id="dashBoard">
+ 			<div id="scoreHeading"><u>Other player's details</u></div>
+ 			<div id="otherPlayers"></div>
+ 		</div>
+		<h2 id="showTurn"></h2>
+ 		<button class="drawPile"><img width="150px" src="./drawPile.jpg"/></button>
+ 		<div id="discardPile"></div>
+	 	<div id="wildCards" class="hide" >
+			<select id = "chooseColor">
+		  		<option value="green">Green</option>
+		  		<option value="red">Red</option>
+		  		<option value="yellow">Yellow</option>
+		  		<option value="blue">Blue</option>
+			</select>
+			<button id="OK">OK</button>
+			<button id="Cancel">Cancel</button>
+		</div>
+
+		<button id="changeTurn" class="hide" >
+			Change Turn
+		</button>
+
+ 		<div id="playerHand" class="playerHand">				
+ 		</div>
+ 	</div>
+ 	<div id="history">
+ 	</div>
+	<div id="sayUno">
+		<button title = "Say UNO" class="sayUno">UNO</button>
+	</div>
+
+ </div> 
+	<audio controls loop autoplay style="visibility:hidden">
+	  <source src="music.mp3" type="audio/mpeg" width = "0" height = "0">
+	  Your browser does not support the audio element.
+	</audio>
+ </body>
+</html>
