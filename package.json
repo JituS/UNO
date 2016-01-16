@@ -1,0 +1,35 @@
+{
+  "name": "uno_game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./server.js",
+  "scripts": {
+    "test": "mocha",
+    "min": "mocha -R min --recursive",
+    "watch": "mocha -R min --watch --recursive",
+    "start": "node ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimranP/UNO_Game.git"
+  },
+  "author": "viraj_jitu_simran_madhuri_ashwin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SimranP/UNO_Game/issues"
+  },
+  "homepage": "https://github.com/SimranP/UNO_Game#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "chai": "^3.4.1",
+    "cookie-parser": "^1.4.0",
+    "express": "^4.13.3",
+    "lodash": "^3.10.1",
+    "mocha": "^2.3.4"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.1",
+    "sinon": "^1.17.2",
+    "supertest": "^1.1.0"
+  } 
+}

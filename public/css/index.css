@@ -1,0 +1,65 @@
+body{
+	background: #ffffff;
+
+}
+
+#superHeading{
+	margin-top: -20px;
+	font-weight: 2000;
+	font-family: serif;
+	background: #63717b;
+	color:white;
+	height:100px;
+}
+
+#superHeading h1{
+	font-size: 35px;
+}
+
+#superHeading h3{
+	font-family: cursive;
+	padding-left: 100px;
+}
+
+.rulesDescription {
+	font-family: sans-serif;
+	font-size: 15px;
+}
+
+.heading {
+	font-family: serif;
+	font-variant: small-caps;
+	color: #800080;
+}
+
+#inputForm{
+	float: right;
+	margin-top: -70px;
+	font-size: 20px;
+}
+
+#inputForm input {
+	width:100px;
+	height: 20px;
+	margin:15px;
+}
+
+#inputForm button {
+	cursor: pointer;
+	width:100px;
+	height: 30px;
+	margin-right: 20px;
+	border-radius: 20px;
+	background: white;
+}
+
+.childHeading{
+	font-family: serif;
+	color: #800080;
+}
+
+#rules{
+	float: left;
+	width:80%;
+	border-right: 1px solid black;
+}
