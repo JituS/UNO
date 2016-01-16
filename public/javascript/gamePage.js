@@ -88,6 +88,7 @@ var matchCard = function(card,discardedPile){
 }
 	
 var generateCards = function(hand){
+	console.log(hand);
 	return hand.map(function(card){
 		return '<td value='+JSON.stringify(card) +'>' +generateCardsImage(card.color,card.name)+ '</td>'
 	}).join('');

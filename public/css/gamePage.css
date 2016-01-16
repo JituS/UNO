@@ -3,8 +3,29 @@
 	font-family: serif;
 }
 
-body{
+h2{
+	font-family: monospace;
+}
 
+body{
+	background: #c0c0c0;
+}
+
+#main{
+	text-align: left;
+    background-image: linear-gradient(grey,darkgrey);
+    padding: 10px;
+	border-radius: 10px;
+	margin-left: 100px;
+}
+
+.createGame{
+	visibility: hidden;
+}
+
+this:hover{
+	cursor: pointer;
+	color: blue;
 }
 
 #header{
@@ -27,6 +48,10 @@ body{
 #gameBoard{
 	width:80%;
 	float: left;
+}
+
+li{
+	cursor: pointer;
 }
 
 #history{

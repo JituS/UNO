@@ -1,2 +1,1 @@
-["Enter your name : <input type='text' name='name' id='name' /><button name='join' id='join'> Join Game </button>",
-"Enter your name : <input type='text' name='name' id='name' />Play with :<input type='number' name='noOfPlayers' id='noOfPlayer' /> players.<button name='join' id='join'> Load Game </button>"]
+["Enter your name : <input type='text' name='name' id='name' /><button name='join' id='join'> Join Game </button>"]
