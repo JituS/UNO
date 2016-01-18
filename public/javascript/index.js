@@ -15,8 +15,6 @@ var postPlayerInformation = function(request){
 	    }
 	});
 };
-var i = 0;
-
 var submitName=function(){
 	var name = document.querySelector("#name").value;
 	var requestForJoin =  'name='+name;
@@ -31,5 +29,3 @@ $(document).ready(function(){
 	printForm();
 	$(document).keypress(checkKey);
 });
-
-

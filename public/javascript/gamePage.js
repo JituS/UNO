@@ -163,7 +163,7 @@ var showPoints = function(players){
 };
 
 var restartGame = function(){
-	$.post('restartGame','restartGame',function(url,status){
+	$.get('restartGame',function(url,status){
 		 if (status == 'success') {
 		 	window.location.href = url+"";
 	    }
@@ -285,7 +285,7 @@ var generateTable = function(interval){
 	$.get('provideTable','provideTable',function(data,status){
 		if (status == 'success') {
 			if(!data)
-		 		window.location.href = "/";
+		 		window.location.href = "/allGame.html";
 			if(data){
 				if(data != JSON.stringify(table)){
 					table = JSON.parse(data);

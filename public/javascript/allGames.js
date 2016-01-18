@@ -27,7 +27,7 @@ var printForm = function(){
 var createGame = function(limit){
 	$.post('createNewGame','limit='+limit,function(data,status){
 		if (status == 'success') {
-			$('html').html('waiting..............');
+			$('html').html('<img src = "./images/waiting.gif"/><br>loading........');
 		};
 	});
 };
@@ -35,7 +35,7 @@ var createGame = function(limit){
 var joinGame = function(){
 	$.post('joinGame','gameID='+this.value,function(data,status){
 		if (status == 'success') {
-			$('html').html('waiting..............');
+			$('html').html('<img src = "./images/waiting.gif"/><br>loading........');
 		};
 	});	
 };

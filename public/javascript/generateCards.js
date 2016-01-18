@@ -20,9 +20,9 @@ var generateCardsImage = function(color,number){
 		9 :9,
 		"skip":"&#8416",
 		"reverse":"&#10563",
-		"plusFour":"p"+"&#8308",
-		"plusTwo":"p"+"&#178",
-		"wildCard":"&#x3C9"
+		"plusFour":"\u208A"+"4",
+		"plusTwo":"\u208A"+"2",
+		"wildCard":"w"
 	}
 
 	return ['<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150px" height="200px" viewBox="240 170 310 310" preserveAspectRatio="xMidYMid meet" zoomAndPan="disable">',
