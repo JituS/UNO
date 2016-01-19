@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SimranP/UNO_Game.git"
+    "url": "https://github.com/JituS/UNO.git"
   },
   "author": "viraj_jitu_simran_madhuri_ashwin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SimranP/UNO_Game/issues"
+    "homepage": "https://github.com/JituS/UNO#server.js",
+    "url": "https://github.com/JituS/UNO.git"
   },
-  "homepage": "https://github.com/SimranP/UNO_Game#readme",
   "dependencies": {
     "body-parser": "^1.14.2",
     "chai": "^3.4.1",
