@@ -13,6 +13,10 @@
     "type": "git",
     "url": "https://github.com/JituS/UNO.git"
   },
+  "engines": {
+   "node": ">= 0.6.0",
+   "npm": ">= 1.0.0"
+  },
   "author": "viraj_jitu_simran_madhuri_ashwin",
   "license": "ISC",
   "bugs": {
@@ -23,7 +27,7 @@
     "body-parser": "^1.14.2",
     "chai": "^3.4.1",
     "cookie-parser": "^1.4.0",
-    "express": "^4.13.3",
+    "express": "~3.4.4",
     "lodash": "^3.10.1",
     "mocha": "^2.3.4"
   },
