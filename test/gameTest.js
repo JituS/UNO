@@ -59,10 +59,23 @@ describe('Game',function(){
 		});
 	});
 	describe('getPlayer',function(){
-		it('gives takes playerId and gives the full player object',function(){
+		it('takes playerId and gives the full player object',function(){
 			var player1 = {id:1,name:'arun',myTurn:true,hand:[]};
 			var player2 = {id:2,name:'varun',myTurn:false,hand:[]};
-			game.players = [player1,player2];
+			game.setLimit(2);
+			game.addPlayer(player1);
+			game.addPlayer(player2);
+			assert.deepEqual(game.getPlayer(1),player1);
+			assert.deepEqual(game.getPlayer(2),player2);
+		});
+	});
+	describe('getPlayer',function(){
+		it('takes playerId and gives the full player object',function(){
+			var player1 = {id:1,name:'arun',myTurn:true,hand:[]};
+			var player2 = {id:2,name:'varun',myTurn:false,hand:[]};
+			game.setLimit(2);
+			game.addPlayer(player1);
+			game.addPlayer(player2);
 			assert.deepEqual(game.getPlayer(1),player1);
 			assert.deepEqual(game.getPlayer(2),player2);
 		});

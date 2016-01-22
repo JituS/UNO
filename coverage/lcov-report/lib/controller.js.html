@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib/controller.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">lib/</a> controller.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">39.6% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>59/149</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">18.92% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>7/37</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">26.92% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>7/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">39.86% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>59/148</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span></td><td class="text"><pre class="prettyprint lang-js">var http = require('http');
+var express = require('express');
+var app = express();
+var ld  = require('lodash');
+var queryString = require('querystring');
+var lib = require('./croupier.js').lib;
+var index = require('./index.json');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var gameInspector = require('./gameInspector.js').gameInspector;
+var Game = require('./game.js');
+var games = [];
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(cookieParser());
+&nbsp;
+var getRandomNumber = function(){
+	var randomNumber = Math.random();
+	return randomNumber;
+};
+&nbsp;
+var checkLogin = <span class="fstat-no" title="function not covered" >function(req){</span>
+<span class="cstat-no" title="statement not covered" >	var player = JSON.parse(req.cookies.id);</span>
+<span class="cstat-no" title="statement not covered" >	return !!(player &amp;&amp; req.game &amp;&amp; ld.find(req.game.players,{id:player.id}));</span>
+};
+&nbsp;
+app.get('/allGames',<span class="fstat-no" title="function not covered" >function(req, res){</span>
+<span class="cstat-no" title="statement not covered" >	(req.cookies.id)</span>
+	? res.send(JSON.stringify(games))
+	: res.redirect('./index.html');
+});
+&nbsp;
+app.get('/allGame.html',<span class="fstat-no" title="function not covered" >function(req, res, next){</span>
+<span class="cstat-no" title="statement not covered" >	(req.cookies.id) </span>
+	? next()
+	: res.redirect('./index.html');
+});
+&nbsp;
+app.get('/',function(req,res){
+	(req.cookies.id &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >checkLogin(req))</span>
+	? <span class="branch-0 cbranch-no" title="branch not covered" >res.redirect('./gamePage.html')</span>
+	: res.redirect('./index.html');
+});
+&nbsp;
+app.use(express.static('./public'));
+&nbsp;
+app.get('/provideIndexForm',function(req,res){
+	res.send(index);
+});
+&nbsp;
+app.post('/addPlayer',function(req,res){
+	var id = getRandomNumber();
+	var requester = req.body;
+	var player = new lib.Player(requester.name, id);
+	res.cookie('id',JSON.stringify(player));
+	res.send(JSON.stringify({newPage:'allGame.html'}));
+});
+&nbsp;
+app.post('/createNewGame', <span class="fstat-no" title="function not covered" >function(req, res){</span>
+<span class="cstat-no" title="statement not covered" >	var player = JSON.parse(req.cookies.id);</span>
+<span class="cstat-no" title="statement not covered" >	var game = new Game();</span>
+<span class="cstat-no" title="statement not covered" >	game.id = games.length;</span>
+<span class="cstat-no" title="statement not covered" >	game.setLimit(req.body.limit);</span>
+<span class="cstat-no" title="statement not covered" >	game.addPlayer(player);</span>
+<span class="cstat-no" title="statement not covered" >	games.push(game);</span>
+<span class="cstat-no" title="statement not covered" >	res.send();</span>
+});	
+&nbsp;
+&nbsp;
+app.post('/joinGame',<span class="fstat-no" title="function not covered" >function(req, res){</span>
+<span class="cstat-no" title="statement not covered" >	var gameID = req.body.gameID;</span>
+<span class="cstat-no" title="statement not covered" >	var player = JSON.parse(req.cookies.id);</span>
+<span class="cstat-no" title="statement not covered" >	var game = ld.find(games,{id:+gameID});</span>
+<span class="cstat-no" title="statement not covered" >	if(game &amp;&amp; !ld.some(game.players,{id:player.id})){</span>
+<span class="cstat-no" title="statement not covered" >		game.addPlayer(player);</span>
+	};
+});
+&nbsp;
+app.get('/startGame',function(req, res){
+	var content;
+	if(req.game &amp;&amp; req.game.allPlayersJoined()){
+		content = {gameStarted:true, url:'gamePage.html'};
+		var croupier = new lib.Croupier(req.game.players);
+		req.game.addCroupier(croupier);
+	}
+	else content = {gameStarted:false, url:'gamePage.html'};
+	res.send(content);
+});
+&nbsp;
+var createTableForEachPlayers = <span class="fstat-no" title="function not covered" >function(game,player){</span>
+<span class="cstat-no" title="statement not covered" >	var table={};</span>
+<span class="cstat-no" title="statement not covered" >	table.player = player;</span>
+<span class="cstat-no" title="statement not covered" >	table.otherPlayerHand = game.croupier.players.map(<span class="fstat-no" title="function not covered" >function(player){</span></span>
+<span class="cstat-no" title="statement not covered" >		var dataOfPlayerToReturn={};</span>
+<span class="cstat-no" title="statement not covered" >		dataOfPlayerToReturn["name"] = player.name;</span>
+<span class="cstat-no" title="statement not covered" >		dataOfPlayerToReturn["hand"] = player.hand.length;</span>
+<span class="cstat-no" title="statement not covered" >		dataOfPlayerToReturn["myTurn"] = player.myTurn;</span>
+<span class="cstat-no" title="statement not covered" >		dataOfPlayerToReturn["saidUno"] = player.saidUno;</span>
+<span class="cstat-no" title="statement not covered" >		return dataOfPlayerToReturn;</span>
+	});
+<span class="cstat-no" title="statement not covered" >	table.recentMove = game.recentMove;</span>
+<span class="cstat-no" title="statement not covered" >	table.currentPlayer = game.getCurrentPlayer().name;</span>
+<span class="cstat-no" title="statement not covered" >	table.discardedPile = ld.findLast(game.croupier.discardedPile);</span>
+<span class="cstat-no" title="statement not covered" >	return table;</span>
+};
+&nbsp;
+app.get('/provideTable',<span class="fstat-no" title="function not covered" >function(req,res){</span>
+<span class="cstat-no" title="statement not covered" >	var game = req.game, player;</span>
+<span class="cstat-no" title="statement not covered" >	if(game){</span>
+<span class="cstat-no" title="statement not covered" >		player = JSON.parse(req.cookies.id);</span>
+<span class="cstat-no" title="statement not covered" >		if(!game.isPlayerInGame(player.id)){</span>
+<span class="cstat-no" title="statement not covered" >			res.send();</span>
+<span class="cstat-no" title="statement not covered" >			return;</span>
+		}
+		else <span class="cstat-no" title="statement not covered" >if(game &amp;&amp; !game.gameStarted){</span>
+<span class="cstat-no" title="statement not covered" >			game.croupier.distributeCards();</span>
+<span class="cstat-no" title="statement not covered" >			game.croupier.openInitialCard();</span>
+<span class="cstat-no" title="statement not covered" >			game.gameStarted = true;	</span>
+<span class="cstat-no" title="statement not covered" >			gameInspector.apprisePlayersTurn(game.croupier.players);</span>
+		};
+<span class="cstat-no" title="statement not covered" >		player = game.getPlayer(player.id);</span>
+<span class="cstat-no" title="statement not covered" >		res.send(JSON.stringify(createTableForEachPlayers(game, player)));	</span>
+	} else <span class="cstat-no" title="statement not covered" >res.send();</span>
+});
+&nbsp;
+app.post('/cardPosition',<span class="fstat-no" title="function not covered" >function(req,res){</span>
+<span class="cstat-no" title="statement not covered" >	var playerId = JSON.parse(req.cookies.id).id;</span>
+<span class="cstat-no" title="statement not covered" >	var player = req.game.getPlayer(playerId);</span>
+<span class="cstat-no" title="statement not covered" >	var cards = JSON.parse(req.body['cards']);</span>
+<span class="cstat-no" title="statement not covered" >	player.hand = cards;</span>
+<span class="cstat-no" title="statement not covered" >	res.send();</span>
+});
+&nbsp;
+app.post('/throwCard',<span class="fstat-no" title="function not covered" >function(req,res){</span>
+<span class="cstat-no" title="statement not covered" >	var playerId = JSON.parse(req.cookies.id).id;</span>
+<span class="cstat-no" title="statement not covered" >	var playedCard = JSON.parse(req.body.card);</span>
+<span class="cstat-no" title="statement not covered" >	var color = req.body.color;</span>
+<span class="cstat-no" title="statement not covered" >	req.game.croupier.makeMove(playerId,playedCard,color);</span>
+<span class="cstat-no" title="statement not covered" >	var player = req.game.getPlayer(playerId);</span>
+<span class="cstat-no" title="statement not covered" >	res.send(JSON.stringify(createTableForEachPlayers(req.game,player)));</span>
+});
+&nbsp;
+app.post('/drawCard',<span class="fstat-no" title="function not covered" >function(req,res){</span>
+<span class="cstat-no" title="statement not covered" >	var playerId = JSON.parse(req.cookies.id).id;</span>
+<span class="cstat-no" title="statement not covered" >	var currentPlayer = req.game.croupier.getPlayerDetails(playerId);</span>
+<span class="cstat-no" title="statement not covered" >	req.game.recentMove="&gt;&gt; "+currentPlayer.name+" has drawn a card"+"&lt;br&gt;"+req.game.recentMove;</span>
+<span class="cstat-no" title="statement not covered" >	req.game.croupier.makeMove(playerId);</span>
+<span class="cstat-no" title="statement not covered" >	var player = req.game.getPlayer(playerId);</span>
+<span class="cstat-no" title="statement not covered" >	res.send(JSON.stringify(createTableForEachPlayers(req.game,player)));</span>
+});
+&nbsp;
+app.post('/changeTurn',<span class="fstat-no" title="function not covered" >function(req,res){</span>
+<span class="cstat-no" title="statement not covered" >	var playerId = JSON.parse(req.cookies.id).id;</span>
+<span class="cstat-no" title="statement not covered" >	var currentPlayer = req.game.croupier.getPlayerDetails(playerId);</span>
+<span class="cstat-no" title="statement not covered" >	if(lib.checkEligibility(currentPlayer,req.game.croupier.players)){</span>
+<span class="cstat-no" title="statement not covered" >		req.game.croupier.players = gameInspector.apprisePlayersTurn(req.game.croupier.players);	</span>
+	}
+<span class="cstat-no" title="statement not covered" >	var player = req.game.getPlayer(playerId);</span>
+<span class="cstat-no" title="statement not covered" >	res.send(JSON.stringify(createTableForEachPlayers(req.game,player)));</span>
+});
+&nbsp;
+app.post('/sayUno',<span class="fstat-no" title="function not covered" >function(req,res){</span>
+<span class="cstat-no" title="statement not covered" >	var player = req.game.croupier.getPlayerDetails(JSON.parse(req.cookies.id).id);</span>
+<span class="cstat-no" title="statement not covered" >	req.game.recentMove="&gt;&gt; "+player.name + " said UNO &lt;br&gt;"+req.game.recentMove;</span>
+<span class="cstat-no" title="statement not covered" >	var unoSaid = req.game.croupier.sayUno(player);</span>
+<span class="cstat-no" title="statement not covered" >	res.send();</span>
+});
+&nbsp;
+app.post('/catchUno',<span class="fstat-no" title="function not covered" >function(req,res){</span>
+<span class="cstat-no" title="statement not covered" >	var name = req.body.name;</span>
+<span class="cstat-no" title="statement not covered" >	var playerID = JSON.parse(req.cookies.id).id;</span>
+<span class="cstat-no" title="statement not covered" >	var currentPlayer = req.game.croupier.getPlayerDetails(playerID);</span>
+<span class="cstat-no" title="statement not covered" >	var player = ld.find(req.game.croupier.players,{name:name});</span>
+<span class="cstat-no" title="statement not covered" >	var isCaught = req.game.croupier.catchUno(player);</span>
+<span class="cstat-no" title="statement not covered" >	if(isCaught) <span class="cstat-no" title="statement not covered" >req.game.recentMove = "&gt;&gt; "+ name + " was caught for not saying UNO by "+currentPlayer.name+"&lt;br&gt;"+req.game.recentMove;</span></span>
+<span class="cstat-no" title="statement not covered" >	res.send();</span>
+});
+&nbsp;
+app.post('/checkWinner',<span class="fstat-no" title="function not covered" >function(req,res){</span>
+<span class="cstat-no" title="statement not covered" >	var players_ = req.game.croupier.players;</span>
+<span class="cstat-no" title="statement not covered" >	if(lib.checkForEndGame(players_)){</span>
+<span class="cstat-no" title="statement not covered" >		req.game.croupier.countPoints();</span>
+	};
+<span class="cstat-no" title="statement not covered" >	var pointsInformation = players_.map(<span class="fstat-no" title="function not covered" >function(player){</span></span>
+<span class="cstat-no" title="statement not covered" >		return {name:player.name,points:player.points};</span>
+	});
+<span class="cstat-no" title="statement not covered" >	res.send(JSON.stringify(pointsInformation));</span>
+});
+&nbsp;
+app.get('/restartGame',<span class="fstat-no" title="function not covered" >function(req,res){</span>
+<span class="cstat-no" title="statement not covered" >	(req.game) &amp;&amp; ld.remove(games,req.game)</span>
+<span class="cstat-no" title="statement not covered" >	res.send("./allGame.html");</span>
+});
+&nbsp;
+var logs = <span class="fstat-no" title="function not covered" >function(req){</span>
+<span class="cstat-no" title="statement not covered" >	console.log('ip --&gt;',req.connection.remoteAddress, '\ncookie --&gt;', queryString.parse(req.headers.cookie).id,'\nurl--&gt;',req.url,'\nmethod--&gt;',req.method,'\n---------------------------------------');</span>
+};
+&nbsp;
+var controller = function(game){
+	return function(req,res){
+		// logs(req);
+		var player = queryString.parse(req.headers.cookie).id;
+		<span class="missing-if-branch" title="if path not taken" >I</span>if(player){
+<span class="cstat-no" title="statement not covered" >			player = JSON.parse(player);</span>
+<span class="cstat-no" title="statement not covered" >			game = ld.find(games,<span class="fstat-no" title="function not covered" >function(game){</span></span>
+<span class="cstat-no" title="statement not covered" >				return ld.find(game.players,{id:player.id});</span>
+			});
+		}
+		req.game = game;
+		app(req,res);
+	};
+};
+&nbsp;
+module.exports = controller;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Jan 22 2016 14:35:18 GMT+0530 (IST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
