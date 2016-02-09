@@ -8,6 +8,7 @@ var printForm = function(){
 };
 
 var postPlayerInformation = function(request){
+	console.log(request);
 	$.post('addPlayer',request,function(data,status){
 		if(status == 'success') {
 	    	var response = JSON.parse(data);
@@ -17,8 +18,12 @@ var postPlayerInformation = function(request){
 };
 var submitName=function(){
 	var name = document.querySelector("#name").value;
-	var requestForJoin =  'name='+name;
-	postPlayerInformation(requestForJoin);
+	if(!name){
+		alert('please enter the name');
+	}else{
+		var requestForJoin =  'name='+name;
+		postPlayerInformation(requestForJoin);
+	}
 };
 
 var checkKey = function(event){

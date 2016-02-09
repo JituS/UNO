@@ -24,6 +24,10 @@ var printForm = function(){
 	});
 };
 
+var createCPUGame = function(limit){
+	$.post('cpu','limit='+limit,function(data,status){})
+};
+
 var createGame = function(limit){
 	$.post('createNewGame','limit='+limit,function(data,status){
 		if (status == 'success') {
@@ -61,4 +65,15 @@ $(document).ready(function(){
 			alert('Player count should be between 1 to 7');
 	};
 	document.querySelector('this').onclick = function(){$('#a').toggleClass('createGame')};
+	$('a').on('click', function(){
+		$('#b').toggleClass('createGame')
+		$('#createcpu').on('click',function(){
+			var input = $('#players');
+			if(input.val() > 0 && input.val() < 8){
+				createGame($('#players').val());
+			}else alert('Player count should be between 1 to 7');
+			createCPUGame(input.val());
+		});
+	});
+
 });

@@ -88,7 +88,6 @@ var matchCard = function(card,discardedPile){
 }
 	
 var generateCards = function(hand){
-	console.log(hand);
 	return hand.map(function(card){
 		return '<td value='+JSON.stringify(card) +'>' +generateCardsImage(card.color,card.name)+ '</td>'
 	}).join('');
@@ -257,14 +256,15 @@ var throwCard = function(card,table){
 			var dataToSend = 'card='+card+'&color='+color;
 			makeRequest('POST','throwCard',dataToSend,true);
 		}
-	}else{
-		alert("you are not allowed to do this");
 	}
+	// }else{
+	// 	// alert("you are not allowed to do this");
+	// }
 };
 
 var drawCard = function(){
 	$.get('provideTable','provideTable',function(data,status){
-		if (status == 'success') {
+		if(status == 'success') {
 			table = JSON.parse(data);
 			if(table.player.myTurn){
 				$('#changeTurn').toggleClass('hide');
@@ -309,6 +309,6 @@ $(document).ready(function(){
 	document.onkeydown = checkKey;
 	$('.sayUno').click(sayUno);
 	$('#changeTurn').click(changeTurn);
-
+	// $('a').on('click', function)
 });
 
